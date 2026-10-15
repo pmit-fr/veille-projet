@@ -1,0 +1,71 @@
+name: Veille projet — publication hebdomadaire (GitHub Pages)
+
+on:
+  schedule:
+    # Chaque lundi à 8 h 05 UTC (10 h 05 à Paris l'été, 9 h 05 l'hiver),
+    # après la tâche planifiée qui écrit le fichier sur SharePoint.
+    - cron: "5 8 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  publish-veille-projet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Récupérer le rapport depuis SharePoint et générer les pages
+        env:
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          SHAREPOINT_DRIVE_ID: ${{ vars.SHAREPOINT_DRIVE_ID }}
+          SHAREPOINT_FILE_NAME: veille-projet-items.json
+          OUTPUT_DIR: public
+          ARCHIVE_DIR: data
+        run: python publish_projet.py
+
+      - name: Archiver l'édition de la semaine dans le dépôt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Rien de nouveau à archiver."
+          else
+            git commit -m "Archive veille projet du $(date -u +%F)"
+            git push
+          fi
+
+      - name: Configurer GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Préparer l'artefact Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Publier sur GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
