@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Veille PROJET (déménagement) — publication hebdomadaire sur GitHub Pages
+Veille PROJET (déménagement) — publication quotidienne (jours ouvrés) sur GitHub Pages
 (projet.pmit.fr).
 
 Même mécanique que le dépôt veille-auto-publish (page CVE quotidienne),
 dans un dépôt séparé pour ne jamais risquer de casser la page CVE :
 
-  1. Une tâche planifiée Claude écrit chaque lundi un fichier JSON
+  1. Une tâche planifiée Claude écrit chaque jour ouvré un fichier JSON
      ("veille-projet-items.json") sur le site SharePoint "Veillepublication".
   2. Ce script le lit (app Azure AD en lecture seule, Sites.Selected),
      le valide, génère les pages HTML, archive l'édition dans data/.
@@ -220,7 +220,7 @@ def sanitize_items(raw_items: list) -> list[dict]:
 
 
 # ─────────────────────────────────────────────────────────────────────────
-# Dates (heure de Paris, sans dépendance externe) et archives hebdomadaires
+# Dates (heure de Paris, sans dépendance externe) et archives quotidiennes
 # ─────────────────────────────────────────────────────────────────────────
 def _last_sunday(year: int, month: int) -> date:
     d = date(year, month, calendar.monthrange(year, month)[1])
@@ -239,8 +239,12 @@ def week_monday(d: date) -> date:
     return d - timedelta(days=d.weekday())
 
 
-def week_label(monday: date) -> str:
-    return f"Semaine du {monday.day} {FR_MONTHS[monday.month - 1]} {monday.year}"
+FR_WEEKDAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+FR_WEEKDAYS_SHORT = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"]
+
+
+def day_label(d: date) -> str:
+    return f"{FR_WEEKDAYS[d.weekday()].capitalize()} {d.day} {FR_MONTHS[d.month - 1]} {d.year}"
 
 
 def _archive_path(archive_dir: str, monday: date) -> str:
@@ -249,7 +253,7 @@ def _archive_path(archive_dir: str, monday: date) -> str:
 
 def save_archive(archive_dir: str, monday: date, page_date: str, items: list[dict]) -> None:
     os.makedirs(archive_dir, exist_ok=True)
-    payload = {"schema": 1, "week_key": monday.isoformat(), "page_date": page_date, "items": items}
+    payload = {"schema": 1, "date_key": monday.isoformat(), "page_date": page_date, "items": items}
     with open(_archive_path(archive_dir, monday), "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
         f.write("\n")
@@ -303,7 +307,7 @@ def build_sidebar(weeks: list[date], current: date, active: date, location: str)
             href = f"archive/{w.isoformat()}.html"
         else:
             href = "../index.html" if w == current else f"{w.isoformat()}.html"
-        label = f'<span class="day-name">Sem.</span><span class="day-num">{w.day:02d}/{w.month:02d}</span>'
+        label = f'<span class="day-name">{FR_WEEKDAYS_SHORT[w.weekday()]}</span><span class="day-num">{w.day:02d}/{w.month:02d}</span>'
         if w == active:
             entries.append(f'<span class="day-item active">{label}</span>')
         else:
@@ -352,7 +356,7 @@ def _render_groups(items: list[dict]) -> str:
 
 
 def _render_section(icon: str, label: str, hint: str, items: list[dict]) -> str:
-    body = _render_groups(items) if items else '<p class="empty">Rien de nouveau cette semaine.</p>'
+    body = _render_groups(items) if items else '<p class="empty">Rien de nouveau depuis la dernière édition.</p>'
     return f'''<section class="category">
   <div class="cat-head">
     <span class="cat-icon">{icon}</span>
@@ -393,7 +397,7 @@ def build_html(page_date: str, items: list[dict], sidebar_html: str) -> str:
         for key, (icon, label, hint) in HARDWARE_CATEGORIES.items()
         if by_cat.get(key)
     ]
-    zone2 = "".join(zone2_sections) or '<p class="empty">Aucune actualité sur le matériel du projet cette semaine.</p>'
+    zone2 = "".join(zone2_sections) or '<p class="empty">Aucune actualité sur le matériel du projet depuis la dernière édition.</p>'
 
     other_html = ""
     if other_items:
@@ -725,7 +729,7 @@ def build_html(page_date: str, items: list[dict], sidebar_html: str) -> str:
 <div class="layout">
 {sidebar_html}
 <header class="page">
-  <div class="eyebrow">Veille projet · hebdomadaire · {esc(page_date)}</div>
+  <div class="eyebrow">Veille projet · quotidienne · {esc(page_date)}</div>
   <h1>Veille réglementaire &amp; matériel</h1>
   <p class="scope-note">D'abord <strong>la réglementation</strong> qui encadre le projet (RGPD, RSE, télécoms), puis <strong>le suivi du matériel</strong> ({esc(hw_names)}) : fins de support, nouvelles versions, compatibilité. Les failles de sécurité urgentes restent sur la veille CVE quotidienne.</p>
 </header>
@@ -778,9 +782,9 @@ def main() -> int:
         print(f"ERREUR pendant la récupération du rapport : {exc}", file=sys.stderr)
         return 1
 
-    current = week_monday(paris_today())
+    current = paris_today()
     if not page_date:
-        page_date = week_label(current)
+        page_date = day_label(current)
     try:
         save_archive(archive_dir, current, page_date, items)
         weeks = all_archive_weeks(archive_dir)
@@ -799,7 +803,7 @@ def main() -> int:
         print(f"ERREUR en générant les pages : {exc}", file=sys.stderr)
         return 1
 
-    print(f"Édition publiée : {os.path.join(output_dir, 'index.html')} ({len(weeks)} semaine(s) archivée(s))")
+    print(f"Édition publiée : {os.path.join(output_dir, 'index.html')} ({len(weeks)} jour(s) archivé(s))")
     return 0
 
 
