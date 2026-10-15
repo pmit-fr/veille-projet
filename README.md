@@ -1,12 +1,12 @@
 # Veille projet — projet.pmit.fr
 
-Page de veille **hebdomadaire** du projet de déménagement, publiée sur GitHub Pages.
+Page de veille **quotidienne** (jours ouvrés) du projet de déménagement, publiée sur GitHub Pages.
 Dépôt séparé de `veille-auto-publish` (page CVE quotidienne) : une panne ici ne touche jamais `dailyreport.pmit.fr`.
 
 ## Comment ça marche
 
-1. **Chaque lundi matin**, une tâche planifiée Claude cherche les actualités et écrit `veille-projet-items.json` sur le site SharePoint *Veillepublication* (même site que la veille CVE).
-2. **Lundi 8 h 05 UTC**, le workflow GitHub lit ce fichier (même app Azure, lecture seule), le vérifie, génère la page et l'archive dans `data/`.
+1. **Chaque jour ouvré à 8 h 20 (Paris)**, une tâche planifiée Claude cherche les actualités et écrit `veille-projet-items.json` sur le site SharePoint *Veillepublication* (même site que la veille CVE).
+2. **À 8 h 05 UTC**, le workflow GitHub lit ce fichier (même app Azure, lecture seule), le vérifie, génère la page et l'archive dans `data/`.
 3. GitHub Pages publie la page sur `projet.pmit.fr`.
 
 La page a deux zones :
@@ -32,7 +32,7 @@ Niveaux : 🔴 action requise · 🟠 à surveiller · 🟢 pour info.
 
 ```json
 {
-  "date": "Semaine du 19 octobre 2026",
+  "date": "Jeudi 15 octobre 2026",
   "items": [
     {
       "category": "rgpd | rse | telecom | routeur | wifi | nas | sauvegarde | visio | hors_perimetre",
