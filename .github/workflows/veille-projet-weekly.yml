@@ -1,10 +1,10 @@
-name: Veille projet — publication hebdomadaire (GitHub Pages)
+name: Veille projet — publication quotidienne (GitHub Pages)
 
 on:
   schedule:
-    # Chaque lundi à 8 h 05 UTC (10 h 05 à Paris l'été, 9 h 05 l'hiver),
-    # après la tâche planifiée qui écrit le fichier sur SharePoint.
-    - cron: "5 8 * * 1"
+    # Du lundi au vendredi à 8 h 05 UTC (10 h 05 à Paris l'été, 9 h 05
+    # l'hiver), après la tâche planifiée qui écrit le fichier sur SharePoint.
+    - cron: "5 8 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
@@ -46,7 +46,7 @@ jobs:
           ARCHIVE_DIR: data
         run: python publish_projet.py
 
-      - name: Archiver l'édition de la semaine dans le dépôt
+      - name: Archiver l'édition du jour dans le dépôt
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
