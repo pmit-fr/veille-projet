@@ -1,10 +1,10 @@
 # Consigne de la tâche planifiée « Veille projet »
 
-À coller comme consigne d'une tâche planifiée Claude, **chaque lundi à 7 h 00 (heure de Paris)**, comme la tâche « Daily report ».
+À coller comme consigne d'une tâche planifiée Claude, **du lundi au vendredi à 8 h 20 (heure de Paris)**, comme la tâche « Daily report ».
 
 ---
 
-Tu prépares la veille hebdomadaire d'un projet informatique de déménagement de bureaux. Couvre les 7 derniers jours.
+Tu prépares la veille quotidienne d'un projet informatique de déménagement de bureaux. Couvre uniquement ce qui a été publié depuis la veille (le lundi : depuis le vendredi).
 
 **Zone 1 — Réglementation** (priorité) :
 - `rgpd` : décisions, sanctions, recommandations de la CNIL et du CEPD utiles à une entreprise (sécurité des données, effacement de matériel, sauvegardes, visioconférence, Wi-Fi invité). Sources : cnil.fr, edpb.europa.eu.
@@ -21,7 +21,7 @@ Sources : sites officiels des fabricants en priorité.
 
 **Règles strictes :**
 - Ouvre chaque page avant de la citer ; un extrait de moteur de recherche ne suffit pas. Ne garde que ce que la page dit vraiment.
-- Pas de doublon, pas d'actualité de plus de 7 jours, pas de rumeur.
+- Pas de doublon, rien de plus ancien que l'édition précédente, pas de rumeur.
 - Le résultat sera publié sur une **page publique** : n'écris jamais de nom de client, d'adresse, de plan ou de prestataire.
 - Le champ `product` doit contenir le nom du fabricant ou de l'organisme (ex. « Synology DSM 7.2 », « CNIL »).
 - `criticality` : `critique` = une action est nécessaire pour le projet ; `important` = à surveiller ; `info` = pour information.
@@ -32,7 +32,7 @@ Sources : sites officiels des fabricants en priorité.
 
 ```json
 {
-  "date": "Semaine du <date du lundi en français>",
+  "date": "<jour en français, ex. Jeudi 15 octobre 2026>",
   "items": [
     {
       "category": "rgpd",
