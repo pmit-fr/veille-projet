@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-10-15",
+  "page_date": "Jeudi 15 octobre 2026",
+  "items": [
+    {
+      "category": "wifi",
+      "product": "Ubiquiti UniFi Access Point & Wireless Bridge 8.8.11",
+      "criticality": "info",
+      "impact": "Une nouvelle version du logiciel des bornes Wi-Fi UniFi est disponible ; à prévoir lors de la configuration des bornes du nouveau site.",
+      "technical_detail": "Firmware UniFi Access Point & Wireless Bridge 8.8.11 publié le 14/10/2026 sur la page officielle des versions Ubiquiti.",
+      "source": "Ubiquiti",
+      "date": "14/10/2026",
+      "url": "https://community.ui.com/releases/UniFi-Access-Point-and-Wireless-Bridge-8-8-11/b094108a-0606-49f3-9c28-cf0a7bc56347"
+    }
+  ]
+}
