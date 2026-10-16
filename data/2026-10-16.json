@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "date_key": "2026-10-16",
+  "page_date": "Vendredi 16 octobre 2026",
+  "items": [
+    {
+      "category": "telecom",
+      "product": "Arcep",
+      "criticality": "info",
+      "impact": "Le régulateur propose des règles qui pourraient augmenter légèrement le prix de gros de la fibre sur les réseaux publics, sans hausse annoncée pour les abonnés.",
+      "technical_detail": "Projet de lignes directrices tarifaires sur les coûts de maintien en conditions opérationnelles (MCO) des réseaux FttH d'initiative publique et modèle de coûts associé ; hausse estimée de 0,50 à 2,00 € par accès actif et par mois pour un peu plus de la moitié des réseaux ; consultation publique du 15 octobre au 16 novembre 2026. L'Arcep rappelle aussi la fermeture programmée du réseau cuivre.",
+      "source": "Arcep",
+      "date": "15/10/2026",
+      "url": "https://www.arcep.fr/actualites/actualites-et-communiques/detail/n/fibre-optique-151026.html"
+    },
+    {
+      "category": "sauvegarde",
+      "product": "Veeam Intelligent ResOps / Veeam Data Platform v13.2",
+      "criticality": "info",
+      "impact": "Veeam lance un module pour mieux contrôler et restaurer les données Microsoft 365, et annonce une nouvelle version de sa plateforme de sauvegarde d'ici la fin de l'année.",
+      "technical_detail": "Intelligent ResOps for Microsoft 365 disponible (option de Veeam Data Cloud for Microsoft 365, éditions Foundation et Advanced) ; iResOps for Veeam Data Platform en préversion privée, lié à la v13.2 attendue en disponibilité générale au 4e trimestre 2026.",
+      "source": "Veeam",
+      "date": "15/10/2026",
+      "url": "https://www.veeam.com/company/press-release/veeam-intelligent-resops-for-microsoft-365-helps-customers-safely-use-ai-cut-storage-costs-and-recover-with-precision.html"
+    }
+  ]
+}
