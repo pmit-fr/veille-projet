@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-10-21",
+  "page_date": "Mercredi 21 octobre 2026",
+  "items": [
+    {
+      "category": "sauvegarde",
+      "product": "Veeam",
+      "criticality": "info",
+      "impact": "Veeam lance un programme qui aide à repérer des prestataires de sauvegarde capables de garder les données sous contrôle local, ce qui peut aider à choisir un hébergement des sauvegardes hors site en Europe.",
+      "technical_detail": "Veeam Sovereign Service Providers Program, phase 1 : « Data Sovereignty Competency » au sein du programme VCSP (Veeam Cloud & Service Provider). Aucune nouvelle version ni fin de support annoncée. Le communiqué précise que cette certification ne remplace pas l'analyse de conformité propre à l'entreprise.",
+      "source": "Veeam",
+      "date": "20/10/2026",
+      "url": "https://www.veeam.com/company/press-release/veeam-puts-customers-in-control-of-data-sovereignty-with-launch-of-new-global-sovereign-service-providers-program.html"
+    }
+  ]
+}
