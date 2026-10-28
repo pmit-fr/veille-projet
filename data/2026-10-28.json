@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-10-28",
+  "page_date": "Mercredi 28 octobre 2026",
+  "items": [
+    {
+      "category": "sauvegarde",
+      "product": "Veeam Backup & Replication 13.1.2",
+      "criticality": "important",
+      "impact": "Une nouvelle mise à jour du logiciel de sauvegarde est disponible et doit être planifiée sur le serveur de sauvegarde.",
+      "technical_detail": "Version 13.1.2 (build 13.1.2.57) publiée le 27/10/2026 (KB4738) : nombreuses corrections, ajout de la prise en charge de VMware vCenter Server 9.1.1, mise à jour de composants tiers. Pour Windows, pas de patch ISO/ZIP : installation via l'ISO complet ou l'outil de mise à jour intégré.",
+      "source": "Veeam",
+      "date": "27/10/2026",
+      "url": "https://www.veeam.com/kb4738"
+    }
+  ]
+}
