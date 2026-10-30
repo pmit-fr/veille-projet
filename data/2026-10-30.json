@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-10-30",
+  "page_date": "Vendredi 30 octobre 2026",
+  "items": [
+    {
+      "category": "rgpd",
+      "product": "CNIL",
+      "criticality": "info",
+      "impact": "La CNIL rappelle par une amende de 7 millions d'euros qu'une application ne doit pas déposer de traceur sans l'accord préalable de l'utilisateur.",
+      "technical_detail": "Délibération SAN-2026-015 du 22/10/2026 : 6 M€ et 1 M€ contre deux sociétés du groupe Fnac Darty, manquement à l'article 82 de la loi Informatique et Libertés (traceur dans une application mobile sans consentement), injonction sous astreinte de 10 000 € par jour.",
+      "source": "CNIL",
+      "date": "29/10/2026",
+      "url": "https://www.cnil.fr/fr/sanction-cookies-app-fnac"
+    }
+  ]
+}
