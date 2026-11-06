@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-11-06",
+  "page_date": "Vendredi 6 novembre 2026",
+  "items": [
+    {
+      "category": "rgpd",
+      "product": "CNIL",
+      "criticality": "info",
+      "impact": "Si l'entreprise utilise sur son site ou ses applications un outil qui enregistre la navigation des visiteurs, elle doit d'abord obtenir leur accord et masquer les données saisies.",
+      "technical_detail": "Recommandation sur les outils de rejeu de session (délibération n° 2026-114 du 8 octobre 2026) : consentement préalable (article 82 de la loi Informatique et Libertés), finalités définies avant déploiement, masquage des champs de saisie et des conversations de chatbot, limitation des sessions collectées.",
+      "source": "CNIL",
+      "date": "05/11/2026",
+      "url": "https://www.cnil.fr/fr/rejeu-de-session-recommandation"
+    }
+  ]
+}
