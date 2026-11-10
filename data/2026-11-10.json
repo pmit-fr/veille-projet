@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-11-10",
+  "page_date": "Mardi 10 novembre 2026",
+  "items": [
+    {
+      "category": "rgpd",
+      "product": "CNIL",
+      "criticality": "important",
+      "impact": "La CNIL sanctionne des organismes pour des failles de sécurité simples (mots de passe faibles, pas de double authentification, systèmes obsolètes), points à vérifier lors de l'installation du nouveau réseau.",
+      "technical_detail": "Dix sanctions en procédure simplifiée (3 000 € à 20 000 €) au titre de l'article 32 du RGPD : absence de MFA pour les administrateurs, accès tiers non contrôlés, journalisation incomplète, segmentation réseau insuffisante, systèmes d'exploitation obsolètes, mots de passe transmis en clair ; absence d'AIPD pour certains. La CNIL annonce poursuivre ses vérifications.",
+      "source": "CNIL",
+      "date": "09/11/2026",
+      "url": "https://www.cnil.fr/fr/sanctions-cybersecurite-collectivites-territoriales"
+    }
+  ]
+}
