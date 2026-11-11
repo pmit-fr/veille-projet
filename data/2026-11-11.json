@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "date_key": "2026-11-11",
+  "page_date": "Mercredi 11 novembre 2026",
+  "items": [
+    {
+      "category": "rgpd",
+      "product": "CEPD / autorité italienne de protection des données",
+      "criticality": "info",
+      "impact": "Un opérateur télécom a reçu une forte amende car des pirates ont obtenu un accès à distance en se faisant passer pour le support technique : un rappel qu'il faut protéger les accès distants, les mots de passe et les certificats.",
+      "technical_detail": "Amende de 1 715 600 EUR ; plus de 365 000 clients touchés ; manquements relevés : gestion des certificats numériques, des clés privées et des identifiants, contrôles de sécurité des API insuffisants, évaluations de sécurité incomplètes. Décision du 14/05/2026, relayée par le CEPD le 10/11/2026.",
+      "source": "CEPD (EDPB)",
+      "date": "10/11/2026",
+      "url": "https://www.edpb.europa.eu/news/italian-dpa-fines-wind-tre-eur-17-million-for-data-security-failures-affecting-over-365-000_en"
+    },
+    {
+      "category": "rse",
+      "product": "Arcep",
+      "criticality": "info",
+      "impact": "L'Arcep appelle à plus de transparence sur l'impact environnemental du numérique, notamment de l'IA, à l'échelle européenne.",
+      "technical_detail": "Compte rendu de l'événement « Pas de soutenabilité, pas d'avenir (numérique) » organisé le 9 novembre 2026 à Bruxelles avec la Représentation permanente de la France auprès de l'UE.",
+      "source": "Arcep",
+      "date": "10/11/2026",
+      "url": "https://www.arcep.fr/actualites/actualites-et-communiques/detail/n/environnement-101126.html"
+    }
+  ]
+}
