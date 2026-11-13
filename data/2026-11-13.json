@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-11-13",
+  "page_date": "Vendredi 13 novembre 2026",
+  "items": [
+    {
+      "category": "rgpd",
+      "product": "CNIL / CEPD",
+      "criticality": "info",
+      "impact": "Les autorités européennes de protection des données ont validé de nouvelles règles pour les sous-traitants et annoncent un contrôle coordonné en 2027 sur les décisions automatisées, dont le recrutement assisté par IA.",
+      "technical_detail": "Plénière du CEPD du 10/11/2026 : déclaration sur le premier réexamen de la décision d'adéquation Corée du Sud, version finale des recommandations sur les BCR sous-traitants, thème de la 6e action coordonnée (décision automatisée) lancée en 2027.",
+      "source": "CNIL",
+      "date": "12/11/2026",
+      "url": "https://www.cnil.fr/fr/actualite-du-cepd-adequation-de-la-coree-du-sud-versions-finales-des-bcr-st-et-action-coordonnee-sur"
+    }
+  ]
+}
