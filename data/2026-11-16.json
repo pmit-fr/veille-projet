@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-11-16",
+  "page_date": "Lundi 16 novembre 2026",
+  "items": [
+    {
+      "category": "rgpd",
+      "product": "CEPD (EDPB)",
+      "criticality": "info",
+      "impact": "Le CEPD précise comment d'autres modèles de clauses contractuelles peuvent servir lorsque des données personnelles sont retransférées hors de l'Union européenne par un prestataire.",
+      "technical_detail": "Déclaration adoptée en plénière sur l'usage des clauses types du Conseil de l'Europe et du réseau ibéro-américain pour les transferts ultérieurs dans le cadre des clauses contractuelles types de l'UE, en lien avec la mise à jour de la FAQ de la Commission européenne.",
+      "source": "CEPD (EDPB)",
+      "date": "13/11/2026",
+      "url": "https://www.edpb.europa.eu/news/edpb-supports-use-of-other-models-of-contractual-clauses-for-onward-transfers-of-personal-data_en"
+    }
+  ]
+}
