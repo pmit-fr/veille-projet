@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-11-17",
+  "page_date": "Mardi 17 novembre 2026",
+  "items": [
+    {
+      "category": "telecom",
+      "product": "Arcep",
+      "criticality": "info",
+      "impact": "L'Arcep a publié deux avis sur des pratiques dans l'accès internet haut et très haut débit à Mayotte, sans effet direct sur un déménagement en métropole.",
+      "technical_detail": "Avis n° 2026-0112-RDPI et n° 2026-0724-RDPI, rendus à la demande de l'Autorité de la concurrence.",
+      "source": "Arcep",
+      "date": "16/11/2026",
+      "url": "https://www.arcep.fr/actualites/actualites-et-communiques/detail/n/deploiement-de-la-fibre-optique-a-mayotte-161126.html"
+    }
+  ]
+}
