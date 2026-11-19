@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "date_key": "2026-11-19",
+  "page_date": "Jeudi 19 novembre 2026",
+  "items": [
+    {
+      "category": "rgpd",
+      "product": "CNIL",
+      "criticality": "important",
+      "impact": "La CNIL sanctionne de 5 millions d'euros une entreprise qui stockait des mots de passe en clair et partageait des comptes entre salariés : chaque utilisateur doit avoir son propre compte.",
+      "technical_detail": "Délibération SAN-2026-016 du 12 novembre 2026. Article 32 RGPD : mots de passe clients stockés en clair, identifiants de bases et d'outils partagés entre plusieurs salariés (pas de traçabilité). Article 5-1-e : données conservées au-delà des durées prévues.",
+      "source": "CNIL",
+      "date": "18/11/2026",
+      "url": "https://www.cnil.fr/fr/conservation-des-mots-de-passe-sanction-5-millions-deuros"
+    },
+    {
+      "category": "rgpd",
+      "product": "CEPD (autorité italienne de protection des données)",
+      "criticality": "info",
+      "impact": "Laisser actives et lisibles les boîtes mail des salariés partis pendant plusieurs mois a valu une amende à une entreprise : prévoir une procédure de désactivation au départ.",
+      "technical_detail": "Amende totale de 25 500 € : réponse tardive à une demande d'accès d'un ancien salarié, et boîtes mail d'anciens salariés maintenues 3 à 6 mois avec lecture possible des messages entrants (minimisation, limitation de conservation). Décision du 20/10/2026.",
+      "source": "CEPD (EDPB) – actualités nationales",
+      "date": "18/11/2026",
+      "url": "https://www.edpb.europa.eu/news/italian-dpa-fines-a-company-eur-25-500-over-employee-access-rights-and-corporate-email_en"
+    },
+    {
+      "category": "rgpd",
+      "product": "CEPD (autorité italienne de protection des données)",
+      "criticality": "info",
+      "impact": "Un prestataire informatique et son client ont été sanctionnés car un correctif de sécurité disponible n'avait pas été installé : le client doit contrôler son prestataire.",
+      "technical_detail": "Amendes de 16 000 € (prestataire) et 12 000 € (responsable de traitement) : documents accessibles sans authentification en modifiant l'identifiant dans l'adresse web, suppression automatique défaillante. Articles 5(1)(e)(f), 25 et 32 RGPD. Décision du 07/10/2026.",
+      "source": "CEPD (EDPB) – actualités nationales",
+      "date": "18/11/2026",
+      "url": "https://www.edpb.europa.eu/news/italian-dpa-fines-radiology-centre-and-it-provider-a-combined-eur-28-000-for-exposing-patient_en"
+    }
+  ]
+}
