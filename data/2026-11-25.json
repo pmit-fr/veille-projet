@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "date_key": "2026-11-25",
+  "page_date": "Mercredi 25 novembre 2026",
+  "items": [
+    {
+      "category": "wifi",
+      "product": "Ubiquiti UniFi Network 11.1",
+      "criticality": "info",
+      "impact": "Une nouvelle version du logiciel de gestion du Wi-Fi UniFi apporte des outils pour gérer plus facilement plusieurs sites et le Wi-Fi invité.",
+      "technical_detail": "Nouveautés annoncées : Supernets (sous-réseau unique automatique par site), Blueprints (politiques communes routage/Wi-Fi/switch/filtrage), provisionnement automatique des switchs, moteur de hotspot invité repensé, clés Wi-Fi privées (PPSK) gérées par les invités avec VLAN privés. Date de disponibilité du logiciel non précisée par l'annonce.",
+      "source": "Ubiquiti",
+      "date": "24/11/2026",
+      "url": "https://blog.ui.com/article/introducing-unifi-network-11-1"
+    }
+  ]
+}
